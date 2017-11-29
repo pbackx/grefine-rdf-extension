@@ -3,3 +3,6 @@
 *.lock
 *.DS_Store
 module/MOD-INF/classes/*
+
+.idea
+*.iml

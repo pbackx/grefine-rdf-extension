@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.lucene.index.CorruptIndexException;
-import org.openrdf.repository.Repository;
-
-
+import org.eclipse.rdf4j.repository.Repository;
 
 
 public interface IVocabularySearcher {
@@ -29,7 +27,7 @@ public interface IVocabularySearcher {
 	 * @throws PrefixExistException
 	 */
 	public void importAndIndexVocabulary(String name, String uri, String fetchUrl,String projectId,VocabularyImporter importer) throws VocabularyImportException, VocabularyIndexException, PrefixExistException, CorruptIndexException, IOException;
-	public void importAndIndexVocabulary(String name, String uri, Repository repository, String projectId,VocabularyImporter importer) throws VocabularyImportException, VocabularyIndexException, PrefixExistException, CorruptIndexException, IOException;
+	public void importAndIndexVocabulary(String name, String uri, Repository repository, String projectId, VocabularyImporter importer) throws VocabularyImportException, VocabularyIndexException, PrefixExistException, CorruptIndexException, IOException;
 	
 	public List<SearchResultItem> searchClasses(String str, String projectId) throws IOException;
 	

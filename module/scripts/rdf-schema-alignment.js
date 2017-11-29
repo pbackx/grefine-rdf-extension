@@ -148,7 +148,8 @@ RdfSchemaAlignmentDialog.prototype._previewRdf = function(){
 
 RdfSchemaAlignmentDialog.prototype._renderBody = function(body) {
     var self = this;
-    
+
+    // pbackx: only activate seems to work now, but the "official" 0.9 version has different code than below
     $("#rdf-schema-alignment-tabs").tabs({
     	activate:function(evt, tabs){
     		if(tabs.newTab.index()===1){
