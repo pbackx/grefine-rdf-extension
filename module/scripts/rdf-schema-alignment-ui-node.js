@@ -11,11 +11,9 @@ RdfSchemaAlignmentDialog.UINode = function(dialog, node, table, options) {
     this._tdToggle = this._tr.insertCell(1);
     this._tdDetails = this._tr.insertCell(2);
     
-    $(this._tdMain).addClass("schema-alignment-node-main").attr("width", "250").addClass("padded");
-    $(this._tdToggle).addClass("schema-alignment-node-toggle").attr("width", "1%").addClass("padded").hide();
-    $(this._tdDetails).addClass("schema-alignment-node-details").attr("width", "62%").hide();
-    
-    
+    $(this._tdMain).addClass("schema-alignment-node-main").addClass("padded");
+    $(this._tdToggle).addClass("schema-alignment-node-toggle").addClass("padded").hide();
+
     this._renderMain();
     //this._renderTypes();
     

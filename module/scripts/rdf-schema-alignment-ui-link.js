@@ -12,10 +12,9 @@ RdfSchemaAlignmentDialog.UILink = function(dialog, link, table, options, parentU
     this._tdToggle = this._tr.insertCell(1);
     this._tdDetails = this._tr.insertCell(2);
     
-    $(this._tdMain).addClass("schema-alignment-link-main").attr("width", "250").addClass("padded");
-    $(this._tdToggle).addClass("schema-alignment-link-toggle").attr("width", "1%").addClass("padded");
-    $(this._tdDetails).addClass("schema-alignment-link-details").attr("width", "90%");
-    
+    $(this._tdMain).addClass("schema-alignment-link-main").addClass("padded");
+    $(this._tdToggle).addClass("schema-alignment-link-toggle").addClass("padded");
+
     this._collapsedDetailDiv = $('<div></div>').appendTo(this._tdDetails).addClass("padded").html("...");
     this._expandedDetailDiv = $('<div></div>').appendTo(this._tdDetails).addClass("schema-alignment-detail-container");
     var self = this;
