@@ -58,9 +58,16 @@ RdfDataTableView.previewOnVisibleRows = function(isLiteral,column, title, expres
             
 //        	this._previewWidget = new ExpressionPreviewDialog.Widget(this._elmts,cellIndex,rowIndices,values,expression);
         f._previewWidget = function(){
-        	
+
         	uriPreviewWidget._elmts = f._elmts;
-        	uriPreviewWidget._columnName = columnName;
+            uriPreviewWidget._elmts.or_dialog_expr.html($.i18n._('core-dialogs')["expression"]);
+            uriPreviewWidget._elmts.or_dialog_lang.html($.i18n._('core-dialogs')["language"]);
+            uriPreviewWidget._elmts.or_dialog_preview.html($.i18n._('core-dialogs')["preview"]);
+            uriPreviewWidget._elmts.or_dialog_history.html($.i18n._('core-dialogs')["history"]);
+            uriPreviewWidget._elmts.or_dialog_starred.html($.i18n._('core-dialogs')["starred"]);
+            uriPreviewWidget._elmts.or_dialog_help.html($.i18n._('core-dialogs')["help"]);
+
+            uriPreviewWidget._columnName = columnName;
         	uriPreviewWidget._rowIndices = rowIndices;
         	uriPreviewWidget._values = values;
             
@@ -76,9 +83,7 @@ RdfDataTableView.previewOnVisibleRows = function(isLiteral,column, title, expres
         	uriPreviewWidget._tabContentWidth = f._elmts.expressionPreviewPreviewContainer.width() + "px";
         	
         	$("#expression-preview-tabs").tabs();
-        	$("#expression-preview-tabs-history").css("display", "");
-        	$("#expression-preview-tabs-help").css("display", "");
-            
+
         	uriPreviewWidget._elmts.expressionPreviewLanguageSelect[0].value = "grel";
         	uriPreviewWidget._elmts.expressionPreviewLanguageSelect.bind("change", function() {
         		$.cookie("scripting.lang", this.value);
